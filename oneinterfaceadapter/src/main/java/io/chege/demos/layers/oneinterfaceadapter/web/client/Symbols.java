@@ -1,27 +1,26 @@
 package io.chege.demos.layers.oneinterfaceadapter.web.client;
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class Symbols {
+    private final String code;
+    private final List<Symbol> data;
 
-    private String code;
-    private List<Symbol> data = new ArrayList<>();
+    public Symbols(@JsonProperty("code") String code, @JsonProperty("data") List<Symbol> data) {
+        this.code = code;
+        this.data = data;
+    }
 
     public String getCode() {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public List<Symbol> getData() {
         return data;
     }
 
-    public void setData(List<Symbol> data) {
-        this.data = data;
-    }
 
 }
