@@ -1,4 +1,4 @@
-package io.chege.demos.layers.oneinterfaceadapter.web;
+package io.chege.demos.layers.oneinterfaceadapter.web.server;
 
 import io.chege.demos.layers.oneinterfaceadapter.web.client.KuCoin;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package io.chege.demos.layers.oneinterfaceadapter.web;
+package io.chege.demos.layers.oneinterfaceadapter.web.server;
 
 public class Symbol {
     private final String symbol;
