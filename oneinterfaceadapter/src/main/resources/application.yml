@@ -1,0 +1,5 @@
+app:
+  web:
+    client:
+      kucoin:
+        rootUri: 'https://api.kucoin.com'

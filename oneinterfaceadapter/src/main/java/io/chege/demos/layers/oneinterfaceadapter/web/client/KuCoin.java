@@ -9,8 +9,10 @@ import org.springframework.web.client.RestTemplate;
 public class KuCoin {
     private final RestTemplate template;
 
-    public KuCoin(RestTemplateBuilder builder) {
-        this.template = builder.rootUri("https://api.kucoin.com/").build();
+    public KuCoin(RestTemplateBuilder builder, KuCoinConfig config) {
+        this.template = builder
+                .rootUri(config.getRootUri())
+                .build();
     }
 
 
@@ -20,4 +22,5 @@ public class KuCoin {
                 Symbols.class
         );
     }
+
 }
