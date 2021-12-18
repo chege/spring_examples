@@ -1,0 +1,5 @@
+app:
+  web:
+    client:
+      openbrewerydb:
+        baseUri: 'https://api.openbrewerydb.org'
