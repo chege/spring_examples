@@ -26,6 +26,14 @@ public class OpenBreweryDb {
                 .block();
     }
 
+    public ResponseEntity<Brewery> get(String id) {
+        return client.get()
+                .uri(builder -> builder.path("/breweries/{id}").build(id))
+                .retrieve()
+                .toEntity(Brewery.class)
+                .block();
+    }
+
     @ConstructorBinding
     @ConfigurationProperties("app.web.client.openbrewerydb")
     public static class Config {
